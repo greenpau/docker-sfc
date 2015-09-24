@@ -75,6 +75,6 @@ rmmod sfc
 Then, load updated `sfc` driver:
 
 ```
-insmod /lib/modules/$(uname -r)/extra/sfc.ko
+insmod /lib/modules/$(uname -r)/updates/sfc.ko
 ```
 
