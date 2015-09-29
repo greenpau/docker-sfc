@@ -78,3 +78,11 @@ Then, load updated `sfc` driver:
 insmod /lib/modules/$(uname -r)/updates/sfc.ko
 ```
 
+## Driver Reports
+
+A user may generate a network card report. The report is necessary to troubleshoot issues with SolarFlare support. 
+
+```
+docker run --rm -i -t --name=sfc --privileged --cap-add all --net=host -v /tmp:/tmp greenpau/sfc sfupdate -V
+docker run --rm -i -t --name=sfc --privileged --cap-add all --net=host -v /tmp:/tmp greenpau/sfc sfreport.pl /tmp/sfreport.pl.`hostname`.`date +"%Y%m%d.%H%M%S"`.html
+```
